@@ -1,0 +1,48 @@
+# Module # 4 assignment: Roots & Reciprocals
+# Author: Will Patterson
+
+import math
+def main():
+    # Solve quadratic equation here:
+    print('Solving the  quadratic equation:')
+    print('x^2 - 5.86x + 8.5408')
+    
+    solution = quadraticFunc()
+    print('Solution 1: ' + str(solution))
+    print()
+    # Solve reciprocal equation here: 
+    print('Attempting to solve the following reciprocal equation:')
+    print('Decimal representation of 1/2 thru 1/10')
+    reciprocalFunc()
+    
+
+def quadraticFunc():
+    # Variables for the equation 
+    a = 1
+    b = -5.86
+    c = 8.5408
+    quadA = (2*a)
+    powB = math.pow(b,2)
+    quadC = (4*a*c)
+    quadBMinusC = (powB - quadC)
+    sqrtQuadBMinusC = math.sqrt(quadBMinusC)
+    posAnswer = (-b + sqrtQuadBMinusC) / quadA
+    negAnswer = (-b - sqrtQuadBMinusC) / quadA
+
+    # Solve the problem here: 
+    print(f'Coefficients: a = {a}, b = {b}, and c = {c}')
+    print(f'Quadratic formula input: x = {-b} +- sqrt({b}^2 - 4*{a}*{c}) / 2*{a}')
+    print(f'Quadratic formula cont: x = {-b} +- sqrt({powB} - {quadC}) / {quadA}')
+    print(f'Quadratic formula cont: x = {-b} +- sqrt({quadBMinusC}) / {quadA}')
+    print(f'Quadratic formula cont: x = {-b} +- {sqrtQuadBMinusC} / {quadA}')
+    print()
+    return (f'x = {posAnswer} or x = {negAnswer}')
+    
+def reciprocalFunc():
+    decimals = [('1/2',0.5),('1/3',1/3),('1/4',1/4),('1/5',1/5),('1/6',1/6),('1/7',1/7),('1/8',1/8),('1/9',1/9),('1/10',1/10)]
+    print('Fractions in decible form:')
+    for dec in decimals:
+        print(f'{dec}')
+
+# Execute/Run the program
+main()
